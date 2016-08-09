@@ -93,7 +93,7 @@ The following properties can be configured:
 		widget: 'alert'
 	}
 ]</code>
-		![Alert](https://github.com/ronny3050/phone-notification-mirror/blob/master/.github/alert.png)
+		<img src="https://github.com/ronny3050/phone-notification-mirror/blob/master/.github/alert.png"></img>
 
 			</td>
 		</tr>
