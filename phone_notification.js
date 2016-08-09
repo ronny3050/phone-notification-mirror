@@ -2,14 +2,14 @@
  * Created by debayan on 7/25/16.
  */
 
-Widget.register("phone_notification",{
+Module.register("phone_notification",{
     defaults : {
         accessToken: '',
         numberOfNotifications: 5,
         displayNotificationIcon: true,
         displayMessage: true,
         displayCount: false,
-        alert: true,
+        alert: false,
         fade: true,
         maxCharacters: 50,
     },
@@ -124,7 +124,7 @@ Widget.register("phone_notification",{
                     var iconWrapper = document.createElement("td");
                     iconWrapper.className = "icon";
                     var icon = document.createElement("span");
-                    var iconPath = window.location.href + '/widgets/phone_notification//icons/' + o.application_name + '.jpg';
+                    var iconPath = window.location.href + '/modules/phone_notification//icons/' + o.application_name + '.jpg';
                     icon.innerHTML = '<img src="' + iconPath +  '" width="25" >';
                     iconWrapper.appendChild(icon);
                     notificationWrapper.appendChild(iconWrapper);

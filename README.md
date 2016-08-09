@@ -24,7 +24,7 @@ modules: [
                 displayNotificationIcon: true,
                 displayMessage: true,
                 displayCount: false,
-                alert: true,
+                alert: false,
                 fade: true,
                 maxCharacters: 50
             },
@@ -83,7 +83,15 @@ The following properties can be configured:
 			<td>Show alerts on new notification<br>
 				<br><b>Possible values:</b> <code>true</code> or <code>false</code>
 				<br><b>Default value:</b> <code>true</code>
-				<br>Please note that this requires the alert module to be present in the config file
+				<br>Please note that this requires the alert module to be present in the config file. For instance,
+				````javascript
+modules: [
+	{
+		widget: 'alert',
+	}
+]
+````
+
 			</td>
 		</tr>
 
