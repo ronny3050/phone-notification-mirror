@@ -1,0 +1,33 @@
+.address {
+    padding-left: 10px;
+    text-align: right;
+}
+.icon{
+    padding-left: 0;
+    padding-right: 10px;
+    font-size: 80%;
+}
+
+.icon span{
+    display: inline-block;
+    -ms-transform: translate(0, 2px); /* IE 9 */
+    -webkit-transform: translate(0, 2px); /* Safari */
+    transform: translate(0, 2px);
+}
+td{
+    padding-left: 5px;
+}
+
+.count {
+    background: #ed1d24;
+    color: #fff;
+    padding: 1px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.6em;
+    display: inline-flex;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    min-width: 1em;
+}

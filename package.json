@@ -1,0 +1,14 @@
+{
+  "name": "phone_notification",
+  "description": "Widget that notifies mirror on new incoming phone notification.",
+  "keywords": [
+    "phone notification",
+    "mirror",
+    "smart mirror",
+    "notification"
+  ],
+  "version": "0.0.1",
+  "dependencies": {
+    "ws" : "latest"
+  }
+}
