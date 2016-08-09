@@ -1,6 +1,8 @@
 # Phone Notification - Mirror
 Displays and alerts mirror users on new phone notifications. 
 
+![Phone Visualization](https://github.com/ronny3050/phone-notification-mirror/blob/master/.github/full_preview.png)
+
 ## Getting Started
 Firstly, a [Pushbullet](https://www.pushbullet.com/) app is required on the phone. After downloading and installing the application on your phone, get a Pushbullet Access Token from your Account Settings. 
 
@@ -69,6 +71,7 @@ The following properties can be configured:
 			<td>Display body of the notification<br>
 				<br><b>Possible values:</b> <code>true</code> or <code>false</code>
 				<br><b>Default value:</b> <code>true</code>
+				![Message](https://github.com/ronny3050/phone-notification-mirror/blob/master/.github/message.png)
 			</td>
 		</tr>
 		<tr>
@@ -76,6 +79,7 @@ The following properties can be configured:
 			<td>Display notification count<br>
 				<br><b>Possible values:</b> <code>true</code> or <code>false</code>
 				<br><b>Default value:</b> <code>true</code>
+				![Count](https://github.com/ronny3050/phone-notification-mirror/blob/master/.github/count.png)
 			</td>
 		</tr>
 		<tr>
@@ -86,9 +90,10 @@ The following properties can be configured:
 				<br>Please note that this requires the alert module to be present in the config file. For instance,
 				<code>modules: [
 	{
-		widget: 'alert',
+		widget: 'alert'
 	}
 ]</code>
+		![Alert](https://github.com/ronny3050/phone-notification-mirror/blob/master/.github/alert.png)
 
 			</td>
 		</tr>
