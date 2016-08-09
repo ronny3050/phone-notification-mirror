@@ -51,7 +51,7 @@ The following properties can be configured:
 			</td>
 		</tr>
 		<tr>
-			<td><code>numberOfNotifications/code></td>
+			<td><code>numberOfNotifications</code></td>
 			<td>Number of notifications to display at a time<br>
 				<br><b>Default value:</b> <code>5</code>
 				<br>If set to 0, no notification messages will be displayed.
@@ -95,7 +95,7 @@ The following properties can be configured:
 			</td>
 		</tr>
 		<tr>
-			<td><code>maxCharacters/code></td>
+			<td><code>maxCharacters</code></td>
 			<td>Number of characters to display per notification body<br>
 				<br><b>Default value:</b> <code>50</code>
 			</td>
