@@ -93,7 +93,7 @@ The following properties can be configured:
 		widget: 'alert'
 	}
 ]</code>
-		<img src="https://github.com/ronny3050/phone-notification-mirror/blob/master/.github/alert.png"></img>
+		<br><img src="https://github.com/ronny3050/phone-notification-mirror/blob/master/.github/alert.png" width="50" height="20"></img>
 
 			</td>
 		</tr>
