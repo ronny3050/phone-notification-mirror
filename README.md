@@ -84,13 +84,11 @@ The following properties can be configured:
 				<br><b>Possible values:</b> <code>true</code> or <code>false</code>
 				<br><b>Default value:</b> <code>true</code>
 				<br>Please note that this requires the alert module to be present in the config file. For instance,
-				````javascript
-modules: [
+				<code>modules: [
 	{
 		widget: 'alert',
 	}
-]
-````
+]</code>
 
 			</td>
 		</tr>
