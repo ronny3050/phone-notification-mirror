@@ -120,12 +120,12 @@ Module.register("phone_notification",{
 
                 if(that.config.displayNotificationIcon)
                 {
-                    console.log("display icon ");
+                    console.log("display icon: );
                     var iconWrapper = document.createElement("td");
                     iconWrapper.className = "icon";
                     var icon = document.createElement("span");
-                    var iconPath = window.location.href + '/modules/phone_notification//icons/' + o.application_name + '.jpg';
-                    icon.innerHTML = '<img src="' + iconPath +  '" width="25" >';
+                    var iconPath = this.data.path + 'icons/' + o.application_name + '.jpg';
+		    icon.innerHTML = '<img src="' + iconPath +  '" width="25" >';
                     iconWrapper.appendChild(icon);
                     notificationWrapper.appendChild(iconWrapper);
                 }
