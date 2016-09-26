@@ -120,7 +120,7 @@ Module.register("phone_notification",{
 
                 if(that.config.displayNotificationIcon)
                 {
-                    console.log("display icon: );
+                    console.log("display icon: ");
                     var iconWrapper = document.createElement("td");
                     iconWrapper.className = "icon";
                     var icon = document.createElement("span");
