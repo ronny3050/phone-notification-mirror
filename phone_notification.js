@@ -124,7 +124,7 @@ Module.register("phone_notification",{
                     var iconWrapper = document.createElement("td");
                     iconWrapper.className = "icon";
                     var icon = document.createElement("span");
-                    var iconPath = this.data.path + 'icons/' + o.application_name + '.jpg';
+                    var iconPath = '/modules/phone_notification/icons/' + o.application_name + '.jpg';
 		    icon.innerHTML = '<img src="' + iconPath +  '" width="25" >';
                     iconWrapper.appendChild(icon);
                     notificationWrapper.appendChild(iconWrapper);
