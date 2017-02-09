@@ -60,11 +60,7 @@ Module.register("phone_notification",{
         if (notification === 'PHONE_RESPONSE'){
             if(payload){
                 this.loaded = true;
-                console.log('new notification: ', payload);
-                console.log(payload);
                 this.cleanPayload(payload);
-                console.log('cleaned payload: ' , this.payload);
-                console.log('payload length: ', this.payload.length);
                 if(this.config.alert)
                     this.sendNotification("SHOW_ALERT", {type: "notification", title: "New phone notification"});
                 this.sendSocketNotification('LISTEN_PHONE',this.config);
@@ -87,15 +83,12 @@ Module.register("phone_notification",{
 
         if(this.config.displayCount)
         {
-            console.log('OLD_HEADER', this.data.header);
-            console.log('LENGTH', this.payload.length);
             var headerRow = document.createElement("tr");
             var headerData = document.createElement("td");
             var headerDiv = document.createElement("div");
             headerDiv.className = "count";
 
             headerDiv.innerHTML = this.payload.length;
-            console.log('HEADER', this.data.header);
             headerData.appendChild(headerDiv);
             var headerRest = document.createElement("td");
             headerRest.innerHTML = this.originalHeader;
@@ -120,7 +113,6 @@ Module.register("phone_notification",{
 
                 if(that.config.displayNotificationIcon)
                 {
-                    console.log("display icon: ");
                     var iconWrapper = document.createElement("td");
                     iconWrapper.className = "icon";
                     var icon = document.createElement("span");
