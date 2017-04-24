@@ -15,7 +15,7 @@ Then run `cd phone_notification` and `npm install` which will install the depend
 
 To use this module, add it to the modules array in the `config/config.js` file:
 ````javascript
-modules: [
+
 	{
 		    module: 'phone_notification',
             position: 'bottom_right',
@@ -29,9 +29,9 @@ modules: [
                 alert: false,
                 fade: true,
                 maxCharacters: 50
-            },
-	}
-]
+            }
+	},
+
 ````
 
 ## Configuration options
