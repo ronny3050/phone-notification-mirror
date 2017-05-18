@@ -40,16 +40,14 @@ Module.register("phone_notification",{
                 // If application_name already exists, increment notification count
                 if(m.application_name === application_name)
                 {
-                    m.count++;
+                    //m.count++;
 		    that.payload.splice(dupIndex,1);
-		    //this.payload.pop();
                 }
 		dupIndex++;
 	    });
         }
 	
         this.payload.unshift(newPayload);
-	this.payload.slice(0, this.config.displayCount - 1);
 
     },
 

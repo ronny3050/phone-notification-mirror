@@ -48,7 +48,7 @@ module.exports = NodeHelper.create({
                         };
                         //console.log('sending push');
                         that.sendSocketNotification('PHONE_RESPONSE',tmp);
-                        ws.close();
+                        //ws.close();
                     }
 		    if(msg.type == "push" && msg.push.type == "dismissal")
 		    {
@@ -57,8 +57,9 @@ module.exports = NodeHelper.create({
 			    package_name: msg.push.package_name
 			};
 			that.sendSocketNotification('DISMISSAL', tmp); 
-			ws.close();	
+			//ws.close();	
 		    }
+		    ws.close();
                 });
             }
         }
