@@ -54,7 +54,8 @@ module.exports = NodeHelper.create({
 		    {
 			//console.log('Dismissed');
 			tmp = {
-			    package_name: msg.push.package_name
+			    package_name: msg.push.package_name,
+			    id: msg.push.notification_id
 			};
 			that.sendSocketNotification('DISMISSAL', tmp); 
 			//ws.close();	

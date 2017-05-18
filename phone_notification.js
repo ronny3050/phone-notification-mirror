@@ -32,13 +32,14 @@ Module.register("phone_notification",{
 
     cleanPayload: function(newPayload){
         var application_name = newPayload.application_name;
+	var id = newPayload.id;
         var that = this;
 	var dupIndex = 0;
         if(this.payload.length > 0)
         {
             this.payload.forEach(function (m) {
                 // If application_name already exists, increment notification count
-                if(m.application_name === application_name)
+                if(m.application_name === application_name && m.id === id)
                 {
                     //m.count++;
 		    that.payload.splice(dupIndex,1);
@@ -53,6 +54,7 @@ Module.register("phone_notification",{
 
     removePayload: function(dismissedPayload){
 	var package_name = dismissedPayload.package_name;
+	var id = dismissedPayload.id;
 	var that = this;
         var index = 0;
 
@@ -60,7 +62,7 @@ Module.register("phone_notification",{
 	{
 	    this.payload.forEach(function(m) {
 	        //If package_name exists in Notification list, remove notification
-	        if(m.package_name === package_name)
+	        if(m.package_name === package_name && m.id === id)
 		{
 		    that.payload.splice(index,1);
 		}
