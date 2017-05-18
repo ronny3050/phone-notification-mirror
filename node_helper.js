@@ -13,7 +13,6 @@ module.exports = NodeHelper.create({
         saveIcon: function(filename,base64string){
             filename  = __dirname + '/icons/' + filename + '.jpg';
             require('fs').exists(filename,function(exists){
-               if(!exists)
                    require('fs').writeFile(filename,new Buffer(base64string,'base64'),function(err){
                             console.log(err);
                    });
@@ -32,24 +31,34 @@ module.exports = NodeHelper.create({
 
                 ws.on('message', function(data, flags) {
                     var msg = JSON.parse(data);
-                    console.log(msg.type);
+                    //console.log(msg.type);
 
 
-                    if(msg.type == "push" && msg.push.application_name!=null)
+                    if(msg.type == "push" && msg.push.type == "mirror")
                     {
                         var iconPath = that.saveIcon(msg.push.application_name,msg.push.icon);
                         tmp = {
                             application_name: msg.push.application_name,
                             id: msg.push.notification_id,
+			    package_name: msg.push.package_name,
                             count: 1,
                             icon: iconPath,
                             title: msg.push.title,
                             body: msg.push.body
                         };
-                        console.log('sending push');
+                        //console.log('sending push');
                         that.sendSocketNotification('PHONE_RESPONSE',tmp);
                         ws.close();
                     }
+		    if(msg.type == "push" && msg.push.type == "dismissal")
+		    {
+			//console.log('Dismissed');
+			tmp = {
+			    package_name: msg.push.package_name
+			};
+			that.sendSocketNotification('DISMISSAL', tmp); 
+			ws.close();	
+		    }
                 });
             }
         }
