@@ -28,7 +28,12 @@ To use this module, add it to the modules array in the `config/config.js` file:
                 displayCount: false,
                 alert: false,
                 fade: true,
-                maxCharacters: 50
+				maxCharacters: 50
+				useEncryption: true,
+				key: {
+					password: 'YOUR_PASSWORD',
+					ident: 'YOUR_USER_IDENT'
+				}
             }
 	},
 
@@ -111,6 +116,48 @@ The following properties can be configured:
 				<br><b>Default value:</b> <code>50</code>
 			</td>
 		</tr>
+		<tr>
+			<td><code>useEncryption</code></td>
+			<td>Enable encrypted communication<br>
+				<br><b>Default value:</b> <code>false</code>
+			</td>
+		</tr>
+		<tr>
+			<td><code>key</code></td>
+			<td>An object with the password and the ident. Used for decryption.<br>
+				<br><b>Default value:</b> <code>See key configuration below</code>
+			</td>
+		</tr>
 
+	</tbody>
+</table>
+
+## key options
+
+The following properties can be configured:
+
+<table width="100%">
+	<!-- why, markdown... -->
+	<thead>
+		<tr>
+			<th>Option</th>
+			<th width="100%">Description</th>
+		</tr>
+	<thead>
+	<tbody>
+		<tr>
+			<td><code>password</code></td>
+			<td>Password supplied by the user for encryption, must be the same on all Pushbullet devices owned by the user<br>
+				<br><b>Default value:</b> <code>none</code>
+			</td>
+		</tr>
+		<tr>
+			<td><code>ident</code></td>
+			<td>The user iden for the current user<br>
+				<br>Request iden with: 
+				<br><code>curl --header &#39;Access-Token: &lt;your_access_token_here&gt;&#39; https://api.pushbullet.com/v2/users/me</code> 
+				<br><b>Default value:</b> <code>none</code>
+			</td>
+		</tr>
 	</tbody>
 </table>
