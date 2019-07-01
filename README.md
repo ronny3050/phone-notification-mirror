@@ -94,15 +94,12 @@ The following properties can be configured:
 				<br><b>Default value:</b> <code>true</code>
 				<br>Please note that this requires the alert module to be present in the config file. For instance,
 				<code>modules: [
-	{
-		widget: 'alert'
-	}
-]</code>
-		<br><img src="https://github.com/ronny3050/phone-notification-mirror/blob/master/.github/alert.png" width="50%" height="2%"></img>
-
-			</td>
+							{
+								widget: 'alert'
+							}
+						]</code>
+		<br><img src="https://github.com/ronny3050/phone-notification-mirror/blob/master/.github/alert.png" width="50%" height="2%"></img>			</td>
 		</tr>
-
 		<tr>
 			<td><code>fade</code></td>
 			<td>Fade older notifications to black. (Gradient)<br>
@@ -128,7 +125,6 @@ The following properties can be configured:
 				<br><b>Default value:</b> <code>See key configuration below</code>
 			</td>
 		</tr>
-
 	</tbody>
 </table>
 
