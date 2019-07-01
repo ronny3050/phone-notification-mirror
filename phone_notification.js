@@ -12,6 +12,11 @@ Module.register("phone_notification", {
     alert: false,
     fade: true,
     maxCharacters: 50,
+    useEncryption: false,
+    key: {
+      password: '',
+      ident: ''
+    }
   },
 
   payload: [],

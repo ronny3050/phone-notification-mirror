@@ -9,6 +9,9 @@
   ],
   "version": "0.2.0",
   "dependencies": {
-    "ws" : "latest"
+    "ws" : "latest",
+    "node-forge": "latest",
+    "atob" : "latest",
+    "btoa" : "latest"
   }
 }
