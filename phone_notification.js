@@ -79,14 +79,12 @@ Module.register("phone_notification", {
             title: "New phone notification"
           });
 
-        this.sendSocketNotification('LISTEN_PHONE', this.config);
         this.updateDom();
       }
     } else if (notification === 'DISMISSAL') {
       if (payload) {
         this.loaded = true;
         this.removePayload(payload);
-        this.sendSocketNotification('LISTEN_PHONE', this.config);
         this.updateDom();
       }
     }
